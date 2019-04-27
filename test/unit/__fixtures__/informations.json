@@ -1,0 +1,25 @@
+{
+  "etatService": "UP",
+  "versionService": "3.6.3",
+  "journalDesModifications": "https://api.insee.fr/registry/resource/_system/governance/apimgt/applicationdata/provider/insee/Sirene/V3/documentation/files/changelog.txt",
+  "datesDernieresMisesAJourDesDonnees": [
+    {
+      "collection": "Unités Légales",
+      "dateDerniereMiseADisposition": "2019-04-26T07:50:32",
+      "dateDernierTraitementMaximum": "2019-04-25T22:08:44",
+      "dateDernierTraitementDeMasse": "2018-09-30"
+    },
+    {
+      "collection": "Établissements",
+      "dateDerniereMiseADisposition": "2019-04-26T08:09:33",
+      "dateDernierTraitementMaximum": "2019-04-25T22:08:44",
+      "dateDernierTraitementDeMasse": "2018-09-30"
+    },
+    {
+      "collection": "Liens de succession",
+      "dateDerniereMiseADisposition": "2019-04-26T08:09:53",
+      "dateDernierTraitementMaximum": "2019-04-25T19:38:19",
+      "dateDernierTraitementDeMasse": null
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "header": {
+    "statut": 200,
+    "message": "OK",
+    "total": 6858080,
+    "debut": 0,
+    "nombre": 20
+  },
+  "liensSuccession": [
+    {
+      "siretEtablissementPredecesseur": "00032517500016",
+      "siretEtablissementSuccesseur": "00032517500032",
+      "dateLienSuccession": "2009-05-27",
+      "transfertSiege": false,
+      "continuiteEconomique": true,
+      "dateDernierTraitementLienSuccession": "2009-05-28T10:20:05"
+    },
+    {
+      "siretEtablissementPredecesseur": "00032517500032",
+      "siretEtablissementSuccesseur": "00032517500040",
+      "dateLienSuccession": "2011-10-21",
+      "transfertSiege": true,
+      "continuiteEconomique": true,
+      "dateDernierTraitementLienSuccession": "2011-12-12T09:36:22"
+    },
+    {
+      "siretEtablissementPredecesseur": "00032517500040",
+      "siretEtablissementSuccesseur": "00032517500057",
+      "dateLienSuccession": "2014-01-07",
+      "transfertSiege": false,
+      "continuiteEconomique": true,
+      "dateDernierTraitementLienSuccession": "2014-01-08T09:01:02"
+    },
+    {
+      "siretEtablissementPredecesseur": "00032517500057",
+      "siretEtablissementSuccesseur": "00032517500065",
+      "dateLienSuccession": "2018-02-07",
+      "transfertSiege": true,
+      "continuiteEconomique": true,
+      "dateDernierTraitementLienSuccession": "2018-07-10T14:17:15"
+    },
+    {
+      "siretEtablissementPredecesseur": "00542002100015",
+      "siretEtablissementSuccesseur": "00542002100049",
+      "dateLienSuccession": "2008-09-05",
+      "transfertSiege": false,
+      "continuiteEconomique": true,
+      "dateDernierTraitementLienSuccession": "2008-09-15T14:10:39"
+    },
+    {
+      "siretEtablissementPredecesseur": "00542002100049",
+      "siretEtablissementSuccesseur": "00542002100056",
+      "dateLienSuccession": "2009-12-23",
+      "transfertSiege": false,
+      "continuiteEconomique": true,
+      "dateDernierTraitementLienSuccession": "2010-01-18T09:28:15"
+    },
+    {
+      "siretEtablissementPredecesseur": "00542004700010",
+      "siretEtablissementSuccesseur": "00732004700017",
+      "dateLienSuccession": "2003-09-15",
+      "transfertSiege": false,
+      "continuiteEconomique": false,
+      "dateDernierTraitementLienSuccession": "2005-11-26T11:54:04"
+    },
+    {
+      "siretEtablissementPredecesseur": "00542012000031",
+      "siretEtablissementSuccesseur": "40794892600313",
+      "dateLienSuccession": "2007-09-01",
+      "transfertSiege": false,
+      "continuiteEconomique": false,
+      "dateDernierTraitementLienSuccession": "2007-10-15T15:53:38"
+    },
+    {
+      "siretEtablissementPredecesseur": "00544011000038",
+      "siretEtablissementSuccesseur": "40267370100023",
+      "dateLienSuccession": "1995-10-01",
+      "transfertSiege": false,
+      "continuiteEconomique": true,
+      "dateDernierTraitementLienSuccession": "2005-11-26T11:54:04"
+    },
+    {
+      "siretEtablissementPredecesseur": "00544011000046",
+      "siretEtablissementSuccesseur": "38398211300011",
+      "dateLienSuccession": "1991-11-13",
+      "transfertSiege": false,
+      "continuiteEconomique": true,
+      "dateDernierTraitementLienSuccession": "2005-11-26T11:54:04"
+    },
+    {
+      "siretEtablissementPredecesseur": "00544011000053",
+      "siretEtablissementSuccesseur": "40267370100015",
+      "dateLienSuccession": "1995-10-01",
+      "transfertSiege": false,
+      "continuiteEconomique": true,
+      "dateDernierTraitementLienSuccession": "2005-11-26T11:54:04"
+    },
+    {
+      "siretEtablissementPredecesseur": "00544056500017",
+      "siretEtablissementSuccesseur": "39204762700014",
+      "dateLienSuccession": "1993-07-01",
+      "transfertSiege": false,
+      "continuiteEconomique": true,
+      "dateDernierTraitementLienSuccession": "2005-11-26T11:54:04"
+    },
+    {
+      "siretEtablissementPredecesseur": "00545009300017",
+      "siretEtablissementSuccesseur": "39443704000022",
+      "dateLienSuccession": "1997-03-01",
+      "transfertSiege": false,
+      "continuiteEconomique": false,
+      "dateDernierTraitementLienSuccession": "2005-11-26T11:54:04"
+    },
+    {
+      "siretEtablissementPredecesseur": "00545009300017",
+      "siretEtablissementSuccesseur": "00545009300033",
+      "dateLienSuccession": "2001-02-20",
+      "transfertSiege": false,
+      "continuiteEconomique": false,
+      "dateDernierTraitementLienSuccession": "2005-11-26T11:54:04"
+    },
+    {
+      "siretEtablissementPredecesseur": "00545011900010",
+      "siretEtablissementSuccesseur": "37960955500014",
+      "dateLienSuccession": "1990-08-27",
+      "transfertSiege": false,
+      "continuiteEconomique": true,
+      "dateDernierTraitementLienSuccession": "2005-11-26T11:54:04"
+    },
+    {
+      "siretEtablissementPredecesseur": "00545011900010",
+      "siretEtablissementSuccesseur": "00545011900028",
+      "dateLienSuccession": "1994-05-01",
+      "transfertSiege": false,
+      "continuiteEconomique": true,
+      "dateDernierTraitementLienSuccession": "2005-11-26T11:54:04"
+    },
+    {
+      "siretEtablissementPredecesseur": "00545011900036",
+      "siretEtablissementSuccesseur": "51979092700015",
+      "dateLienSuccession": "2010-02-05",
+      "transfertSiege": false,
+      "continuiteEconomique": false,
+      "dateDernierTraitementLienSuccession": "2010-03-01T10:45:53"
+    },
+    {
+      "siretEtablissementPredecesseur": "00547180000010",
+      "siretEtablissementSuccesseur": "41237010800018",
+      "dateLienSuccession": "1997-05-01",
+      "transfertSiege": false,
+      "continuiteEconomique": true,
+      "dateDernierTraitementLienSuccession": "2005-11-26T11:54:04"
+    },
+    {
+      "siretEtablissementPredecesseur": "00547180000028",
+      "siretEtablissementSuccesseur": "41237010800026",
+      "dateLienSuccession": "1997-05-01",
+      "transfertSiege": false,
+      "continuiteEconomique": true,
+      "dateDernierTraitementLienSuccession": "2005-11-26T11:54:04"
+    },
+    {
+      "siretEtablissementPredecesseur": "00547341800019",
+      "siretEtablissementSuccesseur": "41297890000014",
+      "dateLienSuccession": "1997-07-01",
+      "transfertSiege": false,
+      "continuiteEconomique": true,
+      "dateDernierTraitementLienSuccession": "2005-11-26T11:54:04"
+    }
+  ]
+}

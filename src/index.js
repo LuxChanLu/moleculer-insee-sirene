@@ -8,6 +8,7 @@
 
 const fetch = require('node-fetch')
 const btoa = require('btoa')
+const qs = require('qs')
 const { MoleculerError } = require('moleculer').Errors
 
 const INSEE_API_ENDPOINT = 'https://api.insee.fr'
@@ -28,7 +29,7 @@ module.exports = {
       /** @type {String} Consumer secret given by INSEE */
       secret: undefined
     },
-    /** @type {String} Acess token cache key name, can be null/undefined to disable */
+    /** @type {String} Acess token cache key name, can be null to disable */
     cache: 'insee.token'
   },
 
@@ -47,12 +48,32 @@ module.exports = {
   actions: {
     siren: {
       async handler(ctx) {
-        const { siren } = ctx.params
+        const { siren, date, champs, masquerValeursNulles } = ctx.params
         if (siren) {
-
+          return (await fetch(`${SIRENE_API_ENDPOINT}/siren/${siren}?${qs.stringify({ date, champs, masquerValeursNulles })}`, { headers: await this.inseeHeader() })).json()
         } else {
-
+          return (await fetch(`${SIRENE_API_ENDPOINT}/siren`, { method: 'POST', body: ctx.params, headers: await this.inseeHeader() })).json()
         }
+      }
+    },
+    siret: {
+      async handler(ctx) {
+        const { siret, date, champs, masquerValeursNulles } = ctx.params
+        if (siret) {
+          return (await fetch(`${SIRENE_API_ENDPOINT}/siret/${siret}?${qs.stringify({ date, champs, masquerValeursNulles })}`, { headers: await this.inseeHeader() })).json()
+        } else {
+          return (await fetch(`${SIRENE_API_ENDPOINT}/siret`, { method: 'POST', body: ctx.params, headers: await this.inseeHeader() })).json()
+        }
+      }
+    },
+    'siret.succession': {
+      async handler(ctx) {
+        return (await fetch(`${SIRENE_API_ENDPOINT}/siret/liensSuccession?${qs.stringify(ctx.params)}`, { headers: await this.inseeHeader() })).json()
+      }
+    },
+    informations: {
+      async handler(ctx) {
+        return (await fetch(`${SIRENE_API_ENDPOINT}/informations`, { headers: await this.inseeHeader() })).json()
       }
     }
   },
@@ -65,7 +86,7 @@ module.exports = {
 		 * Get current INSEE access token
 		 */
     async getInseeToken() {
-      return this.broker.cacher && this.settings.cache ? this.broker.cacher.get(this.settings.cache) : this.token
+      return this.broker.cacher !== null && this.settings.cache !== null ? this.broker.cacher.get(this.settings.cache) : this.token
     },
 
     /**
@@ -121,7 +142,13 @@ module.exports = {
         const { access_token, expires_in } = await res.json()
         return this.setInseeToken({ token: access_token, expiry: (new Date()).getTime() + ((expires_in - 5) * 1000) }) // To refresh 5 sec before expiration
       }
-    }
+    },
+
+    async inseeHeader() {
+      return {
+        Authorization: `Bearer ${(await this.getInseeToken()).token}`
+      }
+    },
   },
   async started() {
     try {
