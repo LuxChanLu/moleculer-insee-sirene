@@ -1,5 +1,5 @@
 const fetch = require('node-fetch')
-var MockDate = require('mockdate')
+const MockDate = require('mockdate')
 const { ServiceBroker } = require('moleculer')
 
 const SirenFixture = require('./__fixtures__/siren.json')

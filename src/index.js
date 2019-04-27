@@ -48,22 +48,12 @@ module.exports = {
   actions: {
     siren: {
       async handler(ctx) {
-        const { siren, date, champs, masquerValeursNulles } = ctx.params
-        if (siren) {
-          return (await fetch(`${SIRENE_API_ENDPOINT}/siren/${siren}?${qs.stringify({ date, champs, masquerValeursNulles })}`, { headers: await this.inseeHeader() })).json()
-        } else {
-          return (await fetch(`${SIRENE_API_ENDPOINT}/siren`, { method: 'POST', body: ctx.params, headers: await this.inseeHeader() })).json()
-        }
+        return this.inseeResource(ctx, 'siren')
       }
     },
     siret: {
       async handler(ctx) {
-        const { siret, date, champs, masquerValeursNulles } = ctx.params
-        if (siret) {
-          return (await fetch(`${SIRENE_API_ENDPOINT}/siret/${siret}?${qs.stringify({ date, champs, masquerValeursNulles })}`, { headers: await this.inseeHeader() })).json()
-        } else {
-          return (await fetch(`${SIRENE_API_ENDPOINT}/siret`, { method: 'POST', body: ctx.params, headers: await this.inseeHeader() })).json()
-        }
+        return this.inseeResource(ctx, 'siret')
       }
     },
     'siret.succession': {
@@ -72,7 +62,7 @@ module.exports = {
       }
     },
     informations: {
-      async handler(ctx) {
+      async handler() {
         return (await fetch(`${SIRENE_API_ENDPOINT}/informations`, { headers: await this.inseeHeader() })).json()
       }
     }
@@ -144,9 +134,22 @@ module.exports = {
       }
     },
 
+    /**
+		 * INSEE API HTTP Header
+		 */
     async inseeHeader() {
       return {
         Authorization: `Bearer ${(await this.getInseeToken()).token}`
+      }
+    },
+
+    async inseeResource(ctx, type) {
+      const { date, champs, masquerValeursNulles } = ctx.params
+      const resource = ctx.params[type]
+      if (resource) {
+        return (await fetch(`${SIRENE_API_ENDPOINT}/${type}/${resource}?${qs.stringify({ date, champs, masquerValeursNulles })}`, { headers: await this.inseeHeader() })).json()
+      } else {
+        return (await fetch(`${SIRENE_API_ENDPOINT}/${type}`, { method: 'POST', body: ctx.params, headers: await this.inseeHeader() })).json()
       }
     },
   },
