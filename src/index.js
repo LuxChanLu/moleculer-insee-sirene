@@ -22,6 +22,7 @@ module.exports = {
 	 * Default settings
 	 */
   settings: {
+    $secureSettings: ['keys', 'cache'],
     /** @type {Object} Keys given by https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Sirene&version=V3&provider=insee. */
     keys: {
       /** @type {String} Consumer key given by INSEE */
